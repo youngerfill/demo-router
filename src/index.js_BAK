@@ -1,0 +1,30 @@
+//import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import * as h from 'react-hyperscript-helpers';
+
+const Main = () => { return h.div("Hello from main!") }
+const Foo = () => { return h.div("Hello from foo!") }
+const Bar = () => { return h.div("Hello from bar!") }
+
+const Page = () =>
+{
+    return h.h(
+        Switch,
+//        [
+            h.h(
+                Route,
+                {
+                    path: '/',
+                    component: Main
+                }
+            )
+//        ]
+    )
+}
+
+ReactDOM.render(
+    h.h(BrowserRouter, h.h(Page)),
+    document.getElementById('root')
+);
+
