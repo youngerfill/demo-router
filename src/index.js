@@ -15,21 +15,21 @@ const Page = () =>
                 Route,
                 {
                     exact: true,
-                    path: '/demo-router',
+                    path: '/',
                     component: Main
                 }
             ),
             h.h(
                 Route,
                 {
-                    path: '/demo-router/foo',
+                    path: '/foo',
                     component: Foo
                 }
             ),
             h.h(
                 Route,
                 {
-                    path: '/demo-router/bar',
+                    path: '/bar',
                     component: Bar
                 }
             )
@@ -41,7 +41,7 @@ ReactDOM.render(
     h.h(
         BrowserRouter,
         {
-            basename: '/demo-router'
+            basename: process.env.PUBLIC_URL
         },
         [
             h.h(Page)
