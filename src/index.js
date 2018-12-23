@@ -15,21 +15,21 @@ const Page = () =>
                 Route,
                 {
                     exact: true,
-                    path: '/',
+                    path: '/demo-router',
                     component: Main
                 }
             ),
             h.h(
                 Route,
                 {
-                    path: '/foo',
+                    path: '/demo-router/foo',
                     component: Foo
                 }
             ),
             h.h(
                 Route,
                 {
-                    path: '/bar',
+                    path: '/demo-router/bar',
                     component: Bar
                 }
             )
@@ -40,6 +40,9 @@ const Page = () =>
 ReactDOM.render(
     h.h(
         BrowserRouter,
+        {
+            basename: '/demo-router'
+        },
         [
             h.h(Page)
         ]
