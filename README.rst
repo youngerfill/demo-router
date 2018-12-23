@@ -1,6 +1,6 @@
-demo-state
-==========
+demo-router
+===========
 
-A minimal ReactJS example, with mobx and react-hyperscript-helpers
+A router example, with subdir support
 
-`Demo here <http://youngerfill.github.io/demo-state>`_.
+`Demo here <http://youngerfill.github.io/demo-router>`_.
